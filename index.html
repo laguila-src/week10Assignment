@@ -1,0 +1,102 @@
+<!-- Week 10 Coding Assignment 
+- Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+	1. A Bootstrap styled table representing your choice of data.
+	2. A Bootstrap styled form that allows the user to add a new row to the table when
+	clicking on Submit button-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lorena Aguila" />
+    <title>tableApp</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+
+  <body class="container">
+    <div class="card border-primary mb-2 mt-5 fs-4">
+      <div class="card-header">Course Registration</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="new-student-name">Student Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="new-student-name"
+                placeholder="Student Name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="new-email">Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="new-email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="new-course-name">Select Course Name</label>
+              <select class="form-control" id="new-course-name" required>
+                <option value="" disabled selected>Course Name</option>
+                <option value="Intro to JavaScript">Intro to JavaScript</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Bootstrap">Bootstrap</option>
+                <option value="JQuery & AJAX">JQuery & AJAX</option>
+                <option value="Intro to React">Intro to React</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <label for="new-enroll-date">Enrollment Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="new-enroll-date"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button id="add-button" class="btn btn-primary">Add Record</button>
+        </div>
+      </div>
+    </div>
+
+    <table
+      id="info-table"
+      class="table table-light table-striped table-bordered"
+    >
+      <tr>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Course Name</th>
+        <th>Date Enrolled</th>
+        <th>Actions</th>
+      </tr>
+    </table>
+
+    <script src="tableApp.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
